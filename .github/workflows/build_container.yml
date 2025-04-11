@@ -31,7 +31,7 @@ jobs:
         run: |
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             if [[ "${{ github.ref_name }}" == feat/* ]]; then
-              echo "tag=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+              echo "tag=latest" >> $GITHUB_OUTPUT
             else
               echo "Manual trigger is not on a feat/* branch. Exiting."
               exit 1
